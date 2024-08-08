@@ -1,3 +1,5 @@
+This has been updated to include the version 2.0 of the OVH API
+---------------------------------------------------
 .. image:: https://travis-ci.org/ovh/csharp-ovh.svg?branch=master
     :target: https://travis-ci.org/ovh/csharp-ovh
 
@@ -41,7 +43,7 @@ The easiest way to get the latest stable release is to grab it from `NuGet
 
 .. code:: bash
 
-    nuget install csharp-ovh
+    nuget install ovh-api
 
 Example Usage
 =============
