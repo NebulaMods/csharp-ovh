@@ -1,10 +1,9 @@
 using System;
 
-namespace Ovh.Api.Testing
+namespace Ovh.Api.Testing;
+
+public interface ITimeProvider
 {
-    public interface ITimeProvider
-    {
-        DateTimeOffset Now { get; }
-        DateTimeOffset UtcNow { get; }
-    }
+    DateTimeOffset Now { get; }
+    DateTimeOffset UtcNow { get; }
 }

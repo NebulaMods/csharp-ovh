@@ -2,19 +2,18 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace Ovh.Test
+namespace Ovh.Test;
+
+public static class HttpResponseMessageFactory
 {
-    public static class HttpResponseMessageFactory
+    public static HttpResponseMessage Create(string content, HttpStatusCode statusCode,
+        string contentType = "application/json", Encoding encoding = null)
     {
-        public static HttpResponseMessage Create(string content, HttpStatusCode statusCode,
-            string contentType = "application/json", Encoding encoding = null)
+        encoding ??= Encoding.UTF8;
+        return new HttpResponseMessage
         {
-            encoding = encoding ?? Encoding.UTF8;
-            return new HttpResponseMessage
-            {
-                Content = new StringContent(content, encoding, contentType),
-                StatusCode = statusCode
-            };
-        }
+            Content = new StringContent(content, encoding, contentType),
+            StatusCode = statusCode
+        };
     }
 }

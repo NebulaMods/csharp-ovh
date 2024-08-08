@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>csharp-ovh</AssemblyName>
     <Title>OVH C# API Wrapper</Title>
     <PackageVersion>4.0.5</PackageVersion>
@@ -10,12 +10,14 @@
     <RepositoryUrl>https://github.com/ovh/csharp-ovh</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>ovh-api</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="2.1.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
-    <None Include="../LICENSE" Pack="true" Visible="false" PackagePath=""/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Ini" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <None Include="../LICENSE" Pack="true" Visible="false" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
