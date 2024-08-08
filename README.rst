@@ -1,8 +1,9 @@
+Update 08/08/2024
+============
 This has been updated to include the version 2.0 of the OVH API
----------------------------------------------------
-.. image:: https://travis-ci.org/ovh/csharp-ovh.svg?branch=master
-    :target: https://travis-ci.org/ovh/csharp-ovh
 
+Old readme
+============
 Lightweight wrapper around OVH's APIs. Handles all the hard work including
 credential creation and requests signing.
 
