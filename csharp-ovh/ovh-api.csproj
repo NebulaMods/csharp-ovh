@@ -2,16 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <AssemblyName>csharp-ovh</AssemblyName>
+    <AssemblyName>ovh-api</AssemblyName>
     <Title>OVH C# API Wrapper</Title>
     <PackageVersion>4.0.5</PackageVersion>
     <PackageDescription>A set of classes and helpers to make calls to OVH's APIs.</PackageDescription>
-    <Authors>Luke Marlin;Julien Loir</Authors>
-    <RepositoryUrl>https://github.com/ovh/csharp-ovh</RepositoryUrl>
+    <Authors>Nebula;</Authors>
+    <RepositoryUrl>https://github.com/nebulamods/ovh-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>ovh-api</PackageId>
+    <Company>Orbital, Inc.</Company>
+    <Copyright>Orbital, Inc.</Copyright>
+    <Description>A C# wrapper for OVH's V1/2 API to make logging in easier.</Description>
+    <PackageProjectUrl>https://github.com/nebulamods/ovh-api</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
