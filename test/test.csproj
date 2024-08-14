@@ -10,6 +10,6 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\csharp-ovh\csharp-ovh.csproj" />
+    <ProjectReference Include="..\csharp-ovh\ovh-api.csproj" />
   </ItemGroup>
 </Project>
