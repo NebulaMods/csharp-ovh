@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.34929.205
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ovh-api", "csharp-ovh\ovh-api.csproj", "{FF3DE9E0-2E5B-4E39-B973-2FE50676D177}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ovh-api", "ovh-api\ovh-api.csproj", "{FF3DE9E0-2E5B-4E39-B973-2FE50676D177}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{050CFB9D-5A65-469C-9717-EB01CA2739B8}"
 EndProject

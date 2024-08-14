@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <AssemblyName>ovh-api</AssemblyName>
     <Title>OVH C# API Wrapper</Title>
-    <PackageVersion>4.0.5</PackageVersion>
+    <PackageVersion>5.0.0</PackageVersion>
     <PackageDescription>A set of classes and helpers to make calls to OVH's APIs.</PackageDescription>
     <Authors>Nebula;</Authors>
     <RepositoryUrl>https://github.com/nebulamods/ovh-api</RepositoryUrl>
@@ -16,6 +16,8 @@
     <Copyright>Orbital, Inc.</Copyright>
     <Description>A C# wrapper for OVH's V1/2 API to make logging in easier.</Description>
     <PackageProjectUrl>https://github.com/nebulamods/ovh-api</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>ovhcloud.png</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,5 +30,16 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
       <_Parameter1>test</_Parameter1>
     </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ovhcloud.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>
