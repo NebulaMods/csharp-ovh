@@ -1,6 +1,8 @@
-using Ovh.Api;
-using System;
 using NUnit.Framework;
+
+using Ovh.Api;
+
+using System;
 
 namespace Ovh.Test;
 
@@ -10,7 +12,7 @@ public class ClientWithEnvironmentParams
     [SetUp]
     public void AddEnpointToEnv()
     {
-        Environment.SetEnvironmentVariable("OVH_ENDPOINT", "ovh-eu", EnvironmentVariableTarget.Process);
+        Environment.SetEnvironmentVariable("OVH_ENDPOINT", "ovh-eu-v1", EnvironmentVariableTarget.Process);
     }
 
     [TearDown]
@@ -33,7 +35,7 @@ public class ClientWithEnvironmentParams
     public void ValidEndpoint()
     {
         Client client = new();
-        Assert.Equals(client.Endpoint, "https://eu.api.ovh.com/1.0/");
+        Assert.That(client.Endpoint.AbsoluteUri.Trim(), Is.EqualTo("https://eu.api.ovh.com/1.0/"));
     }
 
     [Test]
@@ -41,10 +43,9 @@ public class ClientWithEnvironmentParams
     {
         AddOtherParamsToEnv();
         Client client = new();
-        Assert.Equals(client.Endpoint, "https://eu.api.ovh.com/1.0/");
-        Assert.Equals(client.ApplicationKey, "my_app_key");
-        Assert.Equals(client.ApplicationSecret, "my_application_secret");
-        Assert.Equals(client.ConsumerKey, "my_consumer_key");
+        Assert.That(client.Endpoint.AbsoluteUri.Trim(), Is.EqualTo("https://eu.api.ovh.com/1.0/"));
+        Assert.That(client.ApplicationKey, Is.EqualTo("my_app_key"));
+        Assert.That(client.ApplicationSecret, Is.EqualTo("my_application_secret"));
+        Assert.That(client.ConsumerKey, Is.EqualTo("my_consumer_key"));
     }
 }
-

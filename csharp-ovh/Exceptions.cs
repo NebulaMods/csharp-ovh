@@ -36,9 +36,17 @@ namespace Ovh.Api.Exceptions;
 [Serializable]
 public class ApiException : Exception
 {
-    public ApiException() { }
-    public ApiException(string message) : base(message) { }
-    public ApiException(string message, Exception inner) : base(message, inner) { }
+    public ApiException()
+    { }
+
+    public ApiException(string message) : base(message)
+    {
+    }
+
+    public ApiException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ApiException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -51,9 +59,17 @@ public class ApiException : Exception
 [Serializable]
 public class HttpException : ApiException
 {
-    public HttpException() { }
-    public HttpException(string message) : base(message) { }
-    public HttpException(string message, Exception inner) : base(message, inner) { }
+    public HttpException()
+    { }
+
+    public HttpException(string message) : base(message)
+    {
+    }
+
+    public HttpException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected HttpException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -66,9 +82,17 @@ public class HttpException : ApiException
 [Serializable]
 public class InvalidKeyException : ApiException
 {
-    public InvalidKeyException() { }
-    public InvalidKeyException(string message) : base(message) { }
-    public InvalidKeyException(string message, Exception inner) : base(message, inner) { }
+    public InvalidKeyException()
+    { }
+
+    public InvalidKeyException(string message) : base(message)
+    {
+    }
+
+    public InvalidKeyException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected InvalidKeyException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -81,9 +105,17 @@ public class InvalidKeyException : ApiException
 [Serializable]
 public class InvalidCredentialException : ApiException
 {
-    public InvalidCredentialException() { }
-    public InvalidCredentialException(string message) : base(message) { }
-    public InvalidCredentialException(string message, Exception inner) : base(message, inner) { }
+    public InvalidCredentialException()
+    { }
+
+    public InvalidCredentialException(string message) : base(message)
+    {
+    }
+
+    public InvalidCredentialException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected InvalidCredentialException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -93,9 +125,17 @@ public class InvalidCredentialException : ApiException
 [Serializable]
 public class InvalidResponseException : ApiException
 {
-    public InvalidResponseException() { }
-    public InvalidResponseException(string message) : base(message) { }
-    public InvalidResponseException(string message, Exception inner) : base(message, inner) { }
+    public InvalidResponseException()
+    { }
+
+    public InvalidResponseException(string message) : base(message)
+    {
+    }
+
+    public InvalidResponseException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected InvalidResponseException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -108,9 +148,17 @@ public class InvalidResponseException : ApiException
 [Serializable]
 public class InvalidRegionException : ApiException
 {
-    public InvalidRegionException() { }
-    public InvalidRegionException(string message) : base(message) { }
-    public InvalidRegionException(string message, Exception inner) : base(message, inner) { }
+    public InvalidRegionException()
+    { }
+
+    public InvalidRegionException(string message) : base(message)
+    {
+    }
+
+    public InvalidRegionException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected InvalidRegionException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -123,9 +171,17 @@ public class InvalidRegionException : ApiException
 [Serializable]
 public class ReadOnlyException : ApiException
 {
-    public ReadOnlyException() { }
-    public ReadOnlyException(string message) : base(message) { }
-    public ReadOnlyException(string message, Exception inner) : base(message, inner) { }
+    public ReadOnlyException()
+    { }
+
+    public ReadOnlyException(string message) : base(message)
+    {
+    }
+
+    public ReadOnlyException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ReadOnlyException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -138,9 +194,17 @@ public class ReadOnlyException : ApiException
 [Serializable]
 public class ResourceNotFoundException : ApiException
 {
-    public ResourceNotFoundException() { }
-    public ResourceNotFoundException(string message) : base(message) { }
-    public ResourceNotFoundException(string message, Exception inner) : base(message, inner) { }
+    public ResourceNotFoundException()
+    { }
+
+    public ResourceNotFoundException(string message) : base(message)
+    {
+    }
+
+    public ResourceNotFoundException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ResourceNotFoundException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -153,9 +217,17 @@ public class ResourceNotFoundException : ApiException
 [Serializable]
 public class BadParametersException : ApiException
 {
-    public BadParametersException() { }
-    public BadParametersException(string message) : base(message) { }
-    public BadParametersException(string message, Exception inner) : base(message, inner) { }
+    public BadParametersException()
+    { }
+
+    public BadParametersException(string message) : base(message)
+    {
+    }
+
+    public BadParametersException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected BadParametersException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -168,9 +240,17 @@ public class BadParametersException : ApiException
 [Serializable]
 public class StaleRequestException : ApiException
 {
-    public StaleRequestException() { }
-    public StaleRequestException(string message) : base(message) { }
-    public StaleRequestException(string message, Exception inner) : base(message, inner) { }
+    public StaleRequestException()
+    { }
+
+    public StaleRequestException(string message) : base(message)
+    {
+    }
+
+    public StaleRequestException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected StaleRequestException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -183,9 +263,17 @@ public class StaleRequestException : ApiException
 [Serializable]
 public class ResourceConflictException : ApiException
 {
-    public ResourceConflictException() { }
-    public ResourceConflictException(string message) : base(message) { }
-    public ResourceConflictException(string message, Exception inner) : base(message, inner) { }
+    public ResourceConflictException()
+    { }
+
+    public ResourceConflictException(string message) : base(message)
+    {
+    }
+
+    public ResourceConflictException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ResourceConflictException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -198,9 +286,17 @@ public class ResourceConflictException : ApiException
 [Serializable]
 public class NetworkException : ApiException
 {
-    public NetworkException() { }
-    public NetworkException(string message) : base(message) { }
-    public NetworkException(string message, Exception inner) : base(message, inner) { }
+    public NetworkException()
+    { }
+
+    public NetworkException(string message) : base(message)
+    {
+    }
+
+    public NetworkException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected NetworkException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -210,9 +306,17 @@ public class NetworkException : ApiException
 [Serializable]
 public class NotGrantedCallException : ApiException
 {
-    public NotGrantedCallException() { }
-    public NotGrantedCallException(string message) : base(message) { }
-    public NotGrantedCallException(string message, Exception inner) : base(message, inner) { }
+    public NotGrantedCallException()
+    { }
+
+    public NotGrantedCallException(string message) : base(message)
+    {
+    }
+
+    public NotGrantedCallException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected NotGrantedCallException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -222,9 +326,17 @@ public class NotGrantedCallException : ApiException
 [Serializable]
 public class NotCredentialException : ApiException
 {
-    public NotCredentialException() { }
-    public NotCredentialException(string message) : base(message) { }
-    public NotCredentialException(string message, Exception inner) : base(message, inner) { }
+    public NotCredentialException()
+    { }
+
+    public NotCredentialException(string message) : base(message)
+    {
+    }
+
+    public NotCredentialException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected NotCredentialException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -234,9 +346,17 @@ public class NotCredentialException : ApiException
 [Serializable]
 public class ForbiddenException : ApiException
 {
-    public ForbiddenException() { }
-    public ForbiddenException(string message) : base(message) { }
-    public ForbiddenException(string message, Exception inner) : base(message, inner) { }
+    public ForbiddenException()
+    { }
+
+    public ForbiddenException(string message) : base(message)
+    {
+    }
+
+    public ForbiddenException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ForbiddenException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)
@@ -246,9 +366,17 @@ public class ForbiddenException : ApiException
 [Serializable]
 public class ConfigurationKeyMissingException : ApiException
 {
-    public ConfigurationKeyMissingException() { }
-    public ConfigurationKeyMissingException(string message) : base(message) { }
-    public ConfigurationKeyMissingException(string message, Exception inner) : base(message, inner) { }
+    public ConfigurationKeyMissingException()
+    { }
+
+    public ConfigurationKeyMissingException(string message) : base(message)
+    {
+    }
+
+    public ConfigurationKeyMissingException(string message, Exception inner) : base(message, inner)
+    {
+    }
+
     protected ConfigurationKeyMissingException(
       System.Runtime.Serialization.SerializationInfo info,
       System.Runtime.Serialization.StreamingContext context) : base(info, context)

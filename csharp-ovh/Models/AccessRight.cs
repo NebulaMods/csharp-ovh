@@ -27,11 +27,10 @@
 //SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Newtonsoft.Json;
+
 using System;
-using System.Collections.Generic;
 
 namespace Ovh.Api.Models;
-
 
 /// <summary>
 /// Class representing API Access rights composed of paths and methods

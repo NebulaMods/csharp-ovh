@@ -1,5 +1,5 @@
-using System.Net.Http;
 using NUnit.Framework;
+
 using Ovh.Api;
 
 namespace Ovh.Test;
@@ -7,7 +7,7 @@ namespace Ovh.Test;
 [TestFixture]
 public class Signatures
 {
-    static long currentServerTimestamp = 1566485767;
+    private static long currentServerTimestamp = 1566485767;
 
     [Test]
     [TestCase("/", "$1$c87db4be631d68b610079e088248dfe8881c40a1")]
@@ -24,7 +24,7 @@ public class Signatures
             "GET",
             target);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
 
     [Test]
@@ -42,7 +42,7 @@ public class Signatures
             "DELETE",
             target);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
 
     [Test]
@@ -60,7 +60,7 @@ public class Signatures
             "POST",
             target);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
 
     [Test]
@@ -79,7 +79,7 @@ public class Signatures
             target,
             data);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
 
     [Test]
@@ -97,7 +97,7 @@ public class Signatures
             "PUT",
             target);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
 
     [Test]
@@ -116,8 +116,6 @@ public class Signatures
             target,
             data);
 
-        Assert.Equals(expectedSignature, sig);
+        Assert.That(expectedSignature, Is.EqualTo(sig));
     }
-
 }
-

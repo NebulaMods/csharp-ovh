@@ -1,4 +1,3 @@
-
 namespace Ovh.Test.Models;
 
 public class Contact

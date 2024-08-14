@@ -11,7 +11,7 @@ public class QueryStringParams : List<(string, string)>
 
     public void Add(string key, string value)
     {
-        if(_existingKeys.Contains(key))
+        if (_existingKeys.Contains(key))
         {
             throw new ArgumentException("Duplicate keyword. This is currently not supported by OVH API");
         }
@@ -27,7 +27,7 @@ public class QueryStringParams : List<(string, string)>
 
         foreach (var param in this)
         {
-            if(!firstParam)
+            if (!firstParam)
             {
                 sb.Append("&");
             }

@@ -29,7 +29,9 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.FileProviders.Physical;
+
 using Ovh.Api.Exceptions;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -144,7 +146,7 @@ public class ConfigurationManager
     public string Get(string section, string name)
     {
         string envValue = Environment.GetEnvironmentVariable("OVH_" + name.ToUpper());
-        if(envValue != null)
+        if (envValue != null)
         {
             return envValue;
         }

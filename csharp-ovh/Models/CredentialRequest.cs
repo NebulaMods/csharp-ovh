@@ -27,6 +27,7 @@
 //SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 using Newtonsoft.Json;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,7 +73,7 @@ public class CredentialRequest
     /// </summary>
     /// <param name="accessRules">Requested access rights</param>
     /// <param name="redirection">The URL on which to redirect the client when he confirms his credentials</param>
-    public CredentialRequest(List<Tuple<string, string>> accessRules, string redirection) : base ()
+    public CredentialRequest(List<Tuple<string, string>> accessRules, string redirection) : base()
     {
         AccessRules = accessRules.Select(r => new AccessRight(r)).ToList();
         Redirection = redirection;

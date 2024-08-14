@@ -8,7 +8,8 @@ namespace Ovh.Test;
 
 public class FakeHttpMessageHandler : HttpMessageHandler
 {
-    public FakeHttpMessageHandler(Dictionary<string, List<string>> expectedHeaders = null) {}
+    public FakeHttpMessageHandler(Dictionary<string, List<string>> expectedHeaders = null)
+    { }
 
     public virtual HttpResponseMessage Send(HttpRequestMessage request)
     {

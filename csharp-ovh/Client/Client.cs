@@ -28,9 +28,11 @@
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+
 using Ovh.Api.Exceptions;
 using Ovh.Api.Models;
 using Ovh.Api.Testing;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +56,6 @@ namespace Ovh.Api;
 /// </summary>
 public partial class Client
 {
-
     public const string OVH_APP_HEADER = "X-Ovh-Application";
     public const string OVH_CONSUMER_HEADER = "X-Ovh-Consumer";
     public const string OVH_TIME_HEADER = "X-Ovh-Timestamp";
@@ -71,18 +72,22 @@ public partial class Client
     /// Configuration manager used by this <c>Client</c>
     /// </summary>
     public ConfigurationManager ConfigurationManager { get; set; }
+
     /// <summary>
     /// API Endpoint that this <c>Client</c> targets
     /// </summary>
     public Uri Endpoint { get; set; }
+
     /// <summary>
     /// API application Key
     /// </summary>
     public string ApplicationKey { get; set; }
+
     /// <summary>
     /// API application secret
     /// </summary>
     public string ApplicationSecret { get; set; }
+
     /// <summary>
     /// Consumer key that can be either <see cref="RequestConsumerKey">generated</see> or passed to the <see cref="ConfigurationManager">configuration manager</see>>
     /// </summary>
@@ -118,7 +123,7 @@ public partial class Client
     }
 
     private void LoadConfiguration(string endpoint, string applicationKey,
-        string applicationSecret, string consumerKey, char parameterSeparator, 
+        string applicationSecret, string consumerKey, char parameterSeparator,
         string confFileName = ".ovh.conf")
     {
         ConfigurationManager = new ConfigurationManager(confFileName);
@@ -373,7 +378,7 @@ public partial class Client
         return JsonConvert.DeserializeObject<T>(response);
     }
 
-    #endregion
+    #endregion Call
 
     private async Task<ApiException> ExtractExceptionFromHttpResponse(HttpResponseMessage response)
     {
@@ -412,12 +417,15 @@ public partial class Client
                     "FORBIDDEN" => new ForbiddenException(message),
                     _ => new ApiException(message),
                 };
+
             case HttpStatusCode.NotFound:
                 throw new ResourceNotFoundException(message);
             case HttpStatusCode.BadRequest:
                 return errorCode == "QUERY_TIME_OUT" ? new StaleRequestException(message) : new BadParametersException(message);
+
             case HttpStatusCode.Conflict:
                 return new ResourceConflictException(message);
+
             default:
                 return new ApiException(message);
         }
